@@ -1,10 +1,10 @@
-
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
 import { services } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
+import React from "react";
 
 type ServiceCardProps = {
   index: number;
@@ -13,27 +13,32 @@ type ServiceCardProps = {
 };
 
 const ServiceCard = ({ index, title, icon }: ServiceCardProps) => {
+  const [isHovered, setIsHovered] = React.useState<boolean>(false);
   return (
-    <Tilt
+    <motion.div
+      variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
       className="xs:w-[250px] w-full mx-auto"
-      tiltReverse={true}
-      gyroscope={true}
-      tiltMaxAngleX={45}
-      tiltMaxAngleY={20}
-      transitionSpeed={2000}
     >
-      <motion.div
-        variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
+      <Tilt
         className="w-full green-yellow-gradient p-[1px] rounded-[20px] shadow-card"
+        tiltReverse={true}
+        gyroscope={true}
+        tiltMaxAngleX={45}
+        tiltMaxAngleY={20}
+        transitionSpeed={2000}
       >
-        <div className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col">
-          <img src={icon} alt={title} className="w-16 h-16 object-contain" />
+        <div
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+          className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
+        >
+          <img src={icon} alt={title} className={`w-16 h-16 object-contain ${isHovered && 'popout'} `} />
           <h3 className=" text-white text-[20px] font-bold text-center">
             {title}
           </h3>
         </div>
-      </motion.div>
-    </Tilt>
+      </Tilt>
+    </motion.div>
   );
 };
 

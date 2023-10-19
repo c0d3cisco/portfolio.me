@@ -48,6 +48,7 @@ const BallCanvas = ({ icon }: BallCanvasProps) => {
   return (
     <Canvas
       frameloop="always"
+      shadows
       dpr={[1, 2]}
       gl={{ preserveDrawingBuffer: true }}
     >

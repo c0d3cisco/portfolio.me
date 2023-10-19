@@ -30,12 +30,12 @@ const HeroCanvas = () => {
 
   return (
     <Canvas
-      frameloop="demand"
+      frameloop="always"
       shadows
       dpr={[1, 2]}
       camera={{ position: [20, 3, 5], fov: 100 }}
       gl={{ preserveDrawingBuffer: true }}
-      style={{height: "100%"}}
+      // style={{height: "100%"}}
       >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
@@ -45,7 +45,7 @@ const HeroCanvas = () => {
           minPolarAngle={Math.PI/2}
           />
         <mesh ref={meshRef}>
-          <hemisphereLight intensity={1} groundColor="black" />
+          <hemisphereLight intensity={2} groundColor="black" />
           <pointLight intensity={10} />
           <primitive
             object={computer.scene}

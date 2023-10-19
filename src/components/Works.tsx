@@ -29,7 +29,6 @@ const ProjectCard = ({
   source_code_link,
 }: ProjectCardProps) => {
   // const [isExpanded, setIsExpanded] = React.useState<boolean>(false);
-
   return (
     <motion.div
       layout
@@ -54,7 +53,7 @@ const ProjectCard = ({
 
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
             <div
-              onClick={() => window.open(source_code_link, "_blank")}
+              onClick={() => {window.open(source_code_link, "_blank"); console.log('test')}}
               className="propCard black-gradient w-10 h-10 rounded-full flex justify-center items-center"
             >
               <img
@@ -115,5 +114,5 @@ const Works = () => {
   );
 };
 
-const WorkWrapper = SectionWrapper(Works, "works");
+const WorkWrapper = SectionWrapper(Works, "work");
 export default WorkWrapper;
