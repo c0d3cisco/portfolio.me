@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
@@ -28,7 +28,7 @@ import CanvasLoader from "../Loader";
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        <primitive object={earth.scene} scale={2.5} position-y={0} rotation-x={0.2}/>
+        <primitive object={earth.scene} scale={2} position-y={0} rotation-x={0.2}/>
 
         <Preload all />
       </Suspense>
