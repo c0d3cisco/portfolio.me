@@ -1,17 +1,17 @@
 import { BallCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { technologies } from "../constants";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { textVariant } from "../utils/motion";
 import { styles } from "../styles";
 
 const Tech = () => {
   return (
     <>
-      <motion.div variants={textVariant(1)}>
+      <m.div variants={textVariant(1)}>
         <p className={styles.sectionSubText}> What tools I can utilize</p>
         <h2 className={styles.sectionHeadText}>Technologies</h2>
-      </motion.div>
+      </m.div>
       <div className="flex flex-row flex-wrap justify-center gap-10">
         {technologies.map((technology, index) => (
           <div key={"tech" + index}>

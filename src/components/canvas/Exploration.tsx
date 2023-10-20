@@ -35,12 +35,13 @@ const HeroCanvas = () => {
       dpr={[1, 2]}
       camera={{ position: [20, 3, 5], fov: 100 }}
       gl={{ preserveDrawingBuffer: true }}
-      // style={{height: "100%"}}
       >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
           enableZoom={false}
           enablePan={false}
+          autoRotate
+          autoRotateSpeed={-0.5}
           maxPolarAngle={Math.PI/1.5}
           minPolarAngle={Math.PI/2}
           />
@@ -50,7 +51,6 @@ const HeroCanvas = () => {
           <primitive
             object={computer.scene}
             scale={isMobile ? 0.7 : 0.75}
-            // position={isMobile ? [0, -3, -2.2] : [0, 0, 0]}
             position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
             rotation={[-0.3, 0, -0.3]}
           />

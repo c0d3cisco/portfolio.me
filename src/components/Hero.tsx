@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { styles } from "../styles";
 import { HeroCanvas } from "./canvas";
 import { useEffect, useState } from "react";
@@ -47,7 +47,7 @@ const Hero = () => {
           <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
             <a href="#about" aria-label="link to about page for touchscreen devices">
               <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start">
-                <motion.div
+                <m.div
                   animate={{
                     y: [0, 24, 0],
                   }}
@@ -57,7 +57,7 @@ const Hero = () => {
                     repeatType: "loop",
                   }}
                   className="w-3 h-3 rounded-full bg-secondary mt-2"
-                ></motion.div>
+                ></m.div>
               </div>
             </a>
           </div>

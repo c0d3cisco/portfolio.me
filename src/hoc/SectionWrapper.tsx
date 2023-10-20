@@ -1,5 +1,5 @@
 import React from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, m } from "framer-motion";
 import { styles } from "../styles";
 // import { staggerContainer } from "../utils/motion";
 
@@ -7,7 +7,7 @@ const SectionWrapper = (Component: React.FC, idName: string) =>
   function HOC() {
     return (
       <AnimatePresence>
-        <motion.section
+        <m.section
           // layout
           // initial={{ height: 0 }}
           // animate={{ height: "auto" }}
@@ -21,7 +21,7 @@ const SectionWrapper = (Component: React.FC, idName: string) =>
             &nbsp;
           </span>
           <Component />
-        </motion.section>
+        </m.section>
       </AnimatePresence>
     );
   };

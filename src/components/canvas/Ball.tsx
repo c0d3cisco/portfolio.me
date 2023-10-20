@@ -23,12 +23,9 @@ const Ball = (props: BallProps) => {
       <ambientLight intensity={1} />
       <directionalLight position={[0, 0, 0.05]} />
       <mesh castShadow receiveShadow scale={2.75}>
-        <sphereGeometry args={[1, 16, 16]}  />
+        <icosahedronGeometry args={[1, 1]} />
         <meshStandardMaterial
           color="gray"
-          polygonOffset
-          polygonOffsetFactor={-5}
-          flatShading={true}
         />
         <Decal
           position={[0, 0, 1]}

@@ -30,6 +30,15 @@ import bz1 from "./bz/bz1.png"
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import bootstrap from "./tech/Bootstrap.svg";
+import chatGPT from "./tech/ChatGPT_logo.png";
+import express from "./tech/ExpressJS-Dark.svg";
+import materialUI from "./tech/MaterialUI-Dark.svg";
+import netlify from "./tech/Netlify-Dark.svg";
+import sass from './tech/Sass.svg';
+import sqlite from './tech/SQLite.svg';
+import vite from './tech/Vite-Dark.svg';
+import vscode from './tech/VSCode-Dark.svg';
 
 export {
   logo,
@@ -62,5 +71,14 @@ export {
   tripguide,
   hh1,
   hh2,
-  bz1
+  bz1,
+  bootstrap,
+  chatGPT,
+  express,
+  materialUI,
+  netlify,
+  sass,
+  sqlite,
+  vite,
+  vscode
 };

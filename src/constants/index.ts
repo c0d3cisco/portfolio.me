@@ -14,7 +14,6 @@ import {
   mongodb,
   git,
   figma,
-  // docker,
   lima,
   hhouse,
   usArmy,
@@ -23,6 +22,16 @@ import {
   threejs,
   // hh1,
   hh2,
+  bootstrap,
+  chatGPT,
+  express,
+  materialUI,
+  netlify,
+  sass,
+  sqlite,
+  vite,
+  vscode
+  
 } from "../assets/index.ts";
 
 export const navLinks = [
@@ -116,10 +125,42 @@ const technologies = [
     name: "figma",
     icon: figma,
   },
-  // {
-  //   name: "docker",
-  //   icon: docker,
-  // },
+  {
+    name: "Bootstrap",
+    icon: bootstrap,
+  },
+  {
+    name: "ChatGPT",
+    icon: chatGPT,
+  },
+  {
+    name: "Express JS",
+    icon: express,
+  },
+  {
+    name: "Material UI",
+    icon: materialUI,
+  },
+  {
+    name: "Netlify",
+    icon: netlify,
+  },
+  {
+    name: "Sass",
+    icon: sass,
+  },
+  {
+    name: "SQLite",
+    icon: sqlite,
+  },
+  {
+    name: "Vite",
+    icon: vite,
+  },
+  {
+    name: "VS Code",
+    icon: vscode,
+  },
 ];
 
 const experiences = [
@@ -193,7 +234,7 @@ const projects = [
       },
     ],
     image: [hh2],
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/c0d3cisco/hh-frontend",
   },
   {
     name: "ByteSize Adventurez ",
@@ -215,7 +256,7 @@ const projects = [
     ],
 
     image: [bz1],
-    source_code_link: "https://code201d98-team1.github.io/ByteSizeAdventurez/",
+    source_code_link: "https://github.com/code201d98-Team1/ByteSizeAdventurez",
   },
 ];
 

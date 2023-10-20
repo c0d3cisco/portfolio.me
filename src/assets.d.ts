@@ -20,3 +20,5 @@ declare module "*.json" {
 }
 
 declare module "maath/random/dist/maath-random.esm";
+
+declare module 'lodash'

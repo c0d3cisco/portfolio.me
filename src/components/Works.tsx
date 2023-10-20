@@ -1,6 +1,6 @@
 
 import Tilt from "react-parallax-tilt";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 import { styles } from "../styles";
 import { github } from "../assets/index.ts";
@@ -30,7 +30,7 @@ const ProjectCard = ({
 }: ProjectCardProps) => {
   // const [isExpanded, setIsExpanded] = React.useState<boolean>(false);
   return (
-    <motion.div
+    <m.div
       layout
       // className={`cursor-pointer ${isExpanded ? "modelDiv" : ""}`}
       // onClick={() => setIsExpanded(!isExpanded)}
@@ -38,7 +38,6 @@ const ProjectCard = ({
     >
       <Tilt
         tiltReverse={true}
-        gyroscope={true}
         tiltMaxAngleX={10}
         tiltMaxAngleY={10}
         transitionSpeed={2000}
@@ -81,19 +80,19 @@ const ProjectCard = ({
           ))}
         </div>
       </Tilt>
-    </motion.div>
+    </m.div>
   );
 };
 
 const Works = () => {
   return (
     <>
-      <motion.div variants={textVariant(1)}>
+      <m.div variants={textVariant(1)}>
         <p className={styles.sectionSubText}> Where my passion has taken me</p>
         <h2 className={styles.sectionHeadText}>Projects</h2>
-      </motion.div>
+      </m.div>
       <div className="w-full flex">
-        <motion.p
+        <m.p
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
@@ -102,14 +101,14 @@ const Works = () => {
           links to code repositories and live demos in it. It reflects my
           ability to solve complex problems, work with different technologies,
           and manage projects effectively.
-        </motion.p>
+        </m.p>
       </div>
 
-      <motion.div className="mt-20 flex flex-wrap gap-7 justify-center">
+      <m.div className="mt-20 flex flex-wrap gap-7 justify-center">
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
-      </motion.div>
+      </m.div>
     </>
   );
 };
