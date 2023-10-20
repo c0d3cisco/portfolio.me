@@ -32,3 +32,8 @@ https://www.youtube.com/watch?v=0fYi8SGA20k
 https://duncanleung.com/typescript-module-declearation-svg-img-assets/
 https://docs.pmnd.rs/react-three-fiber/tutorials/typescript#extend-usage
 https://www.freecodecamp.org/news/build-an-image-carousel-with-react-and-framer-motion/
+
+## Development Journal
+
+To build this project, I used the following resources:
+https://www.youtube.com/watch?v=0fYi8SGA20k

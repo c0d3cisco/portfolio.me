@@ -26,7 +26,6 @@ const Stars = () => {
           color="#f272c8"
           size={0.0005}
           sizeAttenuation={true}
-          depthWrite={false}
         />
       </Points>
     </group>

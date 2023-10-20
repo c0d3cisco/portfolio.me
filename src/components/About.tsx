@@ -55,8 +55,7 @@ const About = () => {
       >
         I'm a skilled Full-Stack software developer with experience in
         TypeScript and JavaScript, and experiences in frameworks like React,
-        Next.js, and Node.js. I have a passion for building software that is
-        scalable, lovable, and compliant.
+        Next.js, and Node.js. I bring a vast range of experiences to make unique applications.
       </motion.p>
       <div className="mt-20 grid grid-cols-2 gap-10">
         {services.map((service, index: number) => (

@@ -45,7 +45,7 @@ const HeroCanvas = () => {
           minPolarAngle={Math.PI/2}
           />
         <mesh ref={meshRef}>
-          <hemisphereLight intensity={2} groundColor="black" />
+          <hemisphereLight intensity={1.5} groundColor="black" />
           <pointLight intensity={10} />
           <primitive
             object={computer.scene}

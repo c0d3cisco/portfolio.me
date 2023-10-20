@@ -3,13 +3,15 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
-  
-  const EarthCanvas = () => {
+
+const EarthCanvas = () => {
+
+
   const earth = useGLTF("./planet/scene.gltf");
   return (
     <Canvas
       shadows
-      frameloop='demand'
+      frameloop="demand"
       dpr={[1, 2]}
       gl={{ preserveDrawingBuffer: true }}
       camera={{
@@ -28,10 +30,14 @@ import CanvasLoader from "../Loader";
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        <primitive object={earth.scene} scale={2} position-y={0} rotation-x={0.2}/>
-
-        <Preload all />
+          <primitive
+            object={earth.scene}
+            scale={2.5}
+            position-y={0}
+            rotation-x={0.2}
+          />
       </Suspense>
+      <Preload all />
     </Canvas>
   );
 };

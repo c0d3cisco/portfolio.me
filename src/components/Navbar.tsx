@@ -11,6 +11,8 @@ const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
 
+
+
   return (
     <nav
     className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-50`}
@@ -42,7 +44,7 @@ const Navbar = () => {
                 setActive(link.title);
               }}
             >
-              <a href={`#${link.id}`}>{link.id}</a>
+              <a href={`#${link.id}`}>{link.title}</a>
             </li>
           ))}
         </ul>
