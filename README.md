@@ -32,6 +32,8 @@ https://www.youtube.com/watch?v=0fYi8SGA20k
 https://duncanleung.com/typescript-module-declearation-svg-img-assets/
 https://docs.pmnd.rs/react-three-fiber/tutorials/typescript#extend-usage
 https://www.freecodecamp.org/news/build-an-image-carousel-with-react-and-framer-motion/
+https://dequeuniversity.com/rules/axe/4.7/link-name
+
 
 ## Development Journal
 

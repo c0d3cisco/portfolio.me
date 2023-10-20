@@ -44,7 +44,7 @@ const Navbar = () => {
                 setActive(link.title);
               }}
             >
-              <a href={`#${link.id}`}>{link.title}</a>
+              <a href={`#${link.id}`} aria-label={`link to the ${link.id} section of the page`}>{link.title}</a>
             </li>
           ))}
         </ul>
