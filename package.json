@@ -7,9 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "devWeb": "webpack --watch --mode=development",
-    "prod": "webpack --mode=production"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
@@ -37,13 +35,10 @@
     "eslint": "^8.45.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
-    "path": "^0.12.7",
     "postcss": "^8.4.31",
     "tailwindcss": "^3.3.3",
     "ts-loader": "^9.5.0",
     "typescript": "^5.2.2",
-    "vite": "^4.4.5",
-    "webpack": "^5.89.0",
-    "webpack-cli": "^5.1.4"
+    "vite": "^4.4.5"
   }
 }

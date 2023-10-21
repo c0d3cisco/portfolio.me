@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import { Canvas } from "@react-three/fiber";
+// import { Canvas } from "@react-three/fiber";
 import {
   Decal,
   Float,
@@ -22,7 +22,7 @@ const Ball = (props: BallProps) => {
     <Float speed={5} rotationIntensity={0.5} floatIntensity={2}>
       <ambientLight intensity={1} />
       <directionalLight position={[0, 0, 0.05]} />
-      <mesh castShadow receiveShadow scale={2.75}>
+      <mesh scale={2.75}>
         <icosahedronGeometry args={[1, 1]} />
         <meshStandardMaterial
           color="gray"
@@ -43,12 +43,7 @@ type BallCanvasProps = {
 };
 const BallCanvas = ({ icon }: BallCanvasProps) => {
   return (
-    <Canvas
-      frameloop="always"
-      shadows
-      dpr={[1, 2]}
-      gl={{ preserveDrawingBuffer: true }}
-    >
+    <>
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
           enableZoom={false}
@@ -61,7 +56,8 @@ const BallCanvas = ({ icon }: BallCanvasProps) => {
       </Suspense>
 
       <Preload all />
-    </Canvas>
+    </>
+
   );
 };
 
