@@ -1,27 +1,10 @@
 import { m } from "framer-motion";
 import { styles } from "../styles";
 import { HeroCanvas } from "./canvas";
-import { useEffect, useState } from "react";
+
 const Hero = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 1000px)");
-    setIsMobile(mediaQuery.matches);
-
-    const handleMediaQueryChange = (event: MediaQueryListEvent) => {
-      setIsMobile(event.matches);
-    };
-
-    mediaQuery.addEventListener("change", handleMediaQueryChange);
-
-    return () => {
-      mediaQuery.removeEventListener("change", handleMediaQueryChange);
-    };
-  }, []);
-
   return (
-    <section className={`relative w-full ${!isMobile ? 'h-screen' : 'h-[400px]'} mx-auto z-50`}>
+    <section className={`relative w-full h-screen mx-auto z-50`}>
       <div
         className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}
       >
@@ -36,12 +19,12 @@ const Hero = () => {
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             I understand how to build software{" "}
             <br className="sm:block hidden" /> capabilities that are equal parts{" "}
-            <br className="sm:block hidden" /> scalable, lovable, and compliant
+            <br className="sm:block hidden" /> scalable, lovable, and compliant.
           </p>
         </div>
       </div>
 
-      { !isMobile &&
+      { 
         <>
           <HeroCanvas />
           <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
