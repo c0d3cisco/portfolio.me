@@ -1,8 +1,13 @@
 import { m } from "framer-motion";
 import { styles } from "../styles";
 import { HeroCanvas } from "./canvas";
+import { useContext } from "react";
+import { SettingsContext, SettingsContextState } from "./context/settings";
 
 const Hero = () => {
+  const { language } = useContext(SettingsContext) as SettingsContextState;
+
+
   return (
     <section className={`relative w-full h-screen mx-auto z-50`}>
       <div
@@ -14,12 +19,12 @@ const Hero = () => {
         </div>
         <div>
           <h1 className={`${styles.heroHeadText} text-white-100`}>
-            Hi, I'm <span className="text-[#FFBA0A]">Cisco</span>
+            {["Hi, I'm", 'Hola, soy'][language]} <span className="text-[#FFBA0A]">Cisco</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I understand how to build software{" "}
-            <br className="sm:block hidden" /> capabilities that are equal parts{" "}
-            <br className="sm:block hidden" /> scalable, lovable, and compliant.
+            {['I understand how to build software', 'Entiendo cómo crear capacidades de'][language]}{" "}
+            <br className="sm:block hidden" /> {['capabilities that are equal parts', 'de software que sean escalables, '][language]}{" "}
+            <br className="sm:block hidden" /> {['scalable, lovable, and compliant.', 'adorables y compatibles.'][language]}
           </p>
         </div>
       </div>

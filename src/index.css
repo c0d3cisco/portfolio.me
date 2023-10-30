@@ -13,6 +13,10 @@
   color-scheme: dark;
 }
 
+html, body {
+  scroll-behavior: smooth;
+}
+
 .modelDiv {
   position: fixed;
   top: 0;

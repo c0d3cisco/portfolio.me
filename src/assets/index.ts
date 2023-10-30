@@ -19,7 +19,7 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
-
+import gcu from "./company/gcu.png";
 import lima from "./company/lima.png";
 import utk from "./company/utk.svg";
 import hhouse from "./company/hh_high_res.png";
@@ -27,9 +27,6 @@ import usArmy from "./company/usArmy.png";
 import hh1 from "./helen_house/hh1.png"
 import hh2 from "./helen_house/hh2.png"
 import bz1 from "./bz/bz1.png"
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
 import bootstrap from "./tech/Bootstrap.svg";
 import chatGPT from "./tech/ChatGPT_logo.png";
 import express from "./tech/ExpressJS-Dark.svg";
@@ -39,8 +36,13 @@ import sass from './tech/Sass.svg';
 import sqlite from './tech/SQLite.svg';
 import vite from './tech/Vite-Dark.svg';
 import vscode from './tech/VSCode-Dark.svg';
+import usa from './usa.png';
+import spain from './spain.png';
 
 export {
+  usa,
+  spain,
+  gcu,
   logo,
   backend,
   creator,
@@ -66,9 +68,6 @@ export {
   utk,
   hhouse,
   usArmy,
-  carrent,
-  jobit,
-  tripguide,
   hh1,
   hh2,
   bz1,
