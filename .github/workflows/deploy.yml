@@ -25,14 +25,14 @@ jobs:
       run: npm run build  # Build your Vite project, outputting files to 'dist'
 
     - name: Push generated webpage to another repository
-      uses: nkoppel/push-files-to-another-repository
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-      with:
-        source-files: 'dist/'
-        destination-username: 'c0d3cisco'
-        destination-repository: 'porfolio_production'
-        destination-branch: 'main'
-        commit-email: 'c0d3cisco@yahoo.com'
-        commit-username: 'c0d3cisco'
-        commit-message: 'Deploy to Hostinger'
+      run: |
+        git config --global user.name c0d3cisco
+        git config --global user.email 'c0d3cisco@yahoo.com'
+        git clone https://github.com/c0d3cisco/porfolio_production.git
+        cd porfolio_production
+        cp -R dist/* .
+        git add .
+        git commit -m 'Update from build'
+        git push https://${API_TOKEN_GITHUB}@github.com/c0d3cisco/porfolio_production.git
