@@ -35,4 +35,4 @@ jobs:
         cd porfolio_production
         git add .
         git commit -m 'Update from build'
-        git push orgin main
+        git push https://${API_TOKEN_GITHUB}@github.com/c0d3cisco/porfolio_production.git
