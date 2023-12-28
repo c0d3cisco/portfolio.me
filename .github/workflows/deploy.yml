@@ -24,8 +24,15 @@ jobs:
     - name: Build
       run: npm run build  # Build your Vite project, outputting files to 'dist'
 
-    - name: Call Hostinger Webhook
-      run: |
-        curl -X POST -H "Content-Type: application/json" -d '{"directory": "dist"}' \
-        ${{ secrets.HOSTINGER_WEBHOOK_URL }}
-      # This step sends a POST request to Hostinger's webhook URL
+    - name: Push generated webpage to another repository
+      uses: nkoppel/push-files-to-another-repository@1.1.0
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      with:
+        source-files: 'dist/'
+        destination-username: 'c0d3cisco'
+        destination-repository: 'porfolio_production'
+        destination-branch: 'main'
+        commit-email: 'c0d3cisco@yahoo.com'
+        commit-username: 'c0d3cisco'
+        commit-message: 'Deploy to Hostinger'
