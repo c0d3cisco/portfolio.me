@@ -22,7 +22,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-50`}
+      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-50 text-shadow`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
@@ -38,13 +38,13 @@ const Navbar = () => {
             className={`font-bold cursor-pointer text-white text-[${navTextSize}] flex`}
           >
             Cisco{" "}
-            <span className="sm:block hidden">
+            <span className="md:block hidden">
               {" "}
               &nbsp; | &nbsp; {["Portfolio", "Portafolio"][language]}
             </span>{" "}
           </p>
         </Link>
-        <ul className="list-none hidden sm:flex flex-row gap-10 justify-center items-center">
+        <ul className="list-none hidden md:flex flex-row gap-10 justify-center items-center">
           {navLinks.map((link) => (
             <li
               key={link.id}
@@ -64,7 +64,7 @@ const Navbar = () => {
             </li>
           ))}
           <li
-          className="flex justify-center items-center cursor-pointer"
+            className="flex justify-center items-center cursor-pointer w-[40px]"
             onClick={() => {
               setToggle(!toggle);
               setLanguage(language ? 0 : 1);
@@ -73,18 +73,36 @@ const Navbar = () => {
           >
             <img
               src={usa}
-              className={`w-10 ${!language ? '' : 'brightness-[0.25]'}`}
+              className={`${!language ? "" : "brightness-[0.25]"}`}
               alt="usa flag"
             />
             <img
-              className={`w-10 ${language ? '' : 'brightness-[0.25]'}`}
+              className={`${language ? "" : "brightness-[0.25]"}`}
               src={spain}
               alt="usa flag"
             />
           </li>
         </ul>
 
-        <div className="sm:hidden flex flex-1 justify-end items-center">
+        <div className="md:hidden flex flex-1 justify-end items-center">
+          <div
+            className="flex justify-center items-center cursor-pointer mr-4"
+            onClick={() => {
+              setLanguage(language ? 0 : 1);
+              localStorage.setItem("language", language ? "0" : "1");
+            }}
+          >
+            <img
+              src={usa}
+              className={`w-[40px] ${!language ? "" : "brightness-[0.25]"}`}
+              alt="usa flag"
+            />
+            <img
+              className={`w-[40px] ${language ? "" : "brightness-[0.25]"}`}
+              src={spain}
+              alt="usa flag"
+            />
+          </div>
           <img
             src={`${toggle ? close : menu}`}
             alt="menu icon"
@@ -110,7 +128,7 @@ const Navbar = () => {
                     setActive(link.title);
                   }}
                 >
-                  <a href={`#${link.id}`}>{link.id}</a>
+                  <a href={`#${link.id}`}>{link.title[language]}</a>
                 </li>
               ))}
             </ul>
