@@ -33,6 +33,3 @@ jobs:
         git clone https://github.com/c0d3cisco/porfolio_production.git
         cd porfolio_production
         ls
-        git add dist/ * .
-        git commit -m 'Update from build'
-        git push https://${API_TOKEN_GITHUB}@github.com/c0d3cisco/porfolio_production.git
