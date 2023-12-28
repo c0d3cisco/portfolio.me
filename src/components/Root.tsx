@@ -11,7 +11,7 @@ import {
 } from "./index.ts";
 import { ReactNode, Suspense } from "react";
 import LoaderSimple from "./LoaderSimple.tsx";
-import  SettingsProvider from "./context/settings/index.tsx";
+import SettingsProvider from "./context/settings/index.tsx";
 
 export type langProps = {
   lang: 0 | 1;
@@ -27,7 +27,6 @@ const Root = () => {
     ));
   };
 
-
   return (
     <div className="relative z-0 pageBg">
       <SettingsProvider>
@@ -35,17 +34,17 @@ const Root = () => {
           <MotionConfig reducedMotion="user">
             {wrapSuspense([
               <Hero />,
-              <Navbar/>,
+              <Navbar />,
               <About />,
               <Experience />,
               <Tech />,
               <Works />,
               <Contact />,
-              <StarsCanvas />,
             ])}
           </MotionConfig>
         </LazyMotion>
       </SettingsProvider>
+      <StarsCanvas />,
     </div>
   );
 };

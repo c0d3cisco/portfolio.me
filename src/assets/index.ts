@@ -37,7 +37,9 @@ import sqlite from './tech/SQLite.svg';
 import vite from './tech/Vite-Dark.svg';
 import vscode from './tech/VSCode-Dark.svg';
 import usa from './usa.png';
+//<a href="https://www.flaticon.com/free-icons/usa" title="usa icons">Usa icons created by ppangman - Flaticon</a>
 import spain from './spain.png';
+//<a href="https://www.flaticon.com/free-icons/spain" title="spain icons">Spain icons created by Roundicons - Flaticon</a>
 
 export {
   usa,
