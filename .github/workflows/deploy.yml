@@ -26,6 +26,8 @@ jobs:
 
     - name: Deploy to Production Branch
       run: |
+        git config --global user.name 'Cisco'
+        git config --global user.email 'c0d3cisco@yahoo.com'
         git checkout --orphan temp-branch
         git add -f dist
         git commit -m 'Deploy to production'
