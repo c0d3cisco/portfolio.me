@@ -32,7 +32,8 @@ jobs:
         git config --global user.email 'c0d3cisco@yahoo.com'
         git clone https://github.com/c0d3cisco/porfolio_production.git
         rm -rf .gitingore
+        cp -r dist/* porfolio_production/
         cd porfolio_production
-        git add ../dist/
+        git add .
         git commit -m 'Update from build'
         git push https://${API_TOKEN_GITHUB}@github.com/c0d3cisco/porfolio_production.git
