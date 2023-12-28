@@ -26,5 +26,6 @@ jobs:
 
     - name: Call Hostinger Webhook
       run: |
-        curl -X POST -H "Content-Type: application/json" -d '{"directory": "dist"}'
+        curl -X POST -H "Content-Type: application/json" -d '{"directory": "dist"}' \
+        ${{ secrets.HOSTINGER_WEBHOOK_URL }}
       # This step sends a POST request to Hostinger's webhook URL
