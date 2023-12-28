@@ -19,7 +19,7 @@ const Hero = () => {
         </div>
         <div>
           <h1 className={`${styles.heroHeadText} text-white-100`}>
-            {["Hi, I'm", 'Hola, soy'][language]} <span className="text-[#FFBA0A]">Cisco</span>
+            {["Hi, I'm", 'Hola, soy'][language]} <span className="text-[#FFBA0A]">CiscoDisco</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             {['I understand how to build software', 'Entiendo cómo crear capacidades de'][language]}{" "}
