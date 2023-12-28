@@ -32,7 +32,7 @@ jobs:
         git config --global user.email 'c0d3cisco@yahoo.com'
         git clone https://github.com/c0d3cisco/porfolio_production.git
         cd porfolio_production
-        cp -R dist/* .
-        git add .
+        ls
+        git add dist/ * .
         git commit -m 'Update from build'
         git push https://${API_TOKEN_GITHUB}@github.com/c0d3cisco/porfolio_production.git
