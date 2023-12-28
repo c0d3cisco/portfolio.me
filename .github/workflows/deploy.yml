@@ -23,7 +23,3 @@ jobs:
 
     - name: Build
       run: npm run build  # Build your Vite project, outputting files to 'dist'
-
-    - name: Call Hostinger Webhook
-      run: |
-        curl -X POST -H "Content-Type: application/json" \
