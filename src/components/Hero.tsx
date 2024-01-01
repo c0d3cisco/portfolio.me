@@ -34,7 +34,7 @@ const Hero = () => {
           <HeroCanvas />
           <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
             <a href="#about" aria-label="link to about page for touchscreen devices">
-              <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start">
+              <div className="h-[64px] w-[35px] rounded-3xl border-4 border-secondary flex justify-center items-start">
                 <m.div
                   animate={{
                     y: [0, 24, 0],

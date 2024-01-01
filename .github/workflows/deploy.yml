@@ -23,6 +23,12 @@ jobs:
 
     - name: Build
       run: npm run build  # Build your Vite project, outputting files to 'dist'
+      env:
+        VITE_APP_EMAILJS_SERVICE_ID: ${{ secrets.VITE_APP_EMAILJS_SERVICE_ID }}
+        VITE_APP_EMAILJS_TEMPLATE_ID: ${{ secrets.VITE_APP_EMAILJS_TEMPLATE_ID }}
+        VITE_APP_EMAILJS_PUBLIC_KEY: ${{ secrets.VITE_APP_EMAILJS_PUBLIC_KEY }}
+
+
 
     - name: Push generated webpage to another repository
       env:
