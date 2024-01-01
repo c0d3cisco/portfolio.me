@@ -170,12 +170,12 @@ const experiences = [
     company_name: ["University of Tennessee, Knoxville", "Universidad de Tennessee, Knoxville"],
     icon: utk,
     iconBg: "#FF8200",
-    date: "Aug 2009 - May 2013 ",
+    date: "Aug 2009 - May 2013",
     hashTags: [['#leadership', '#adaptability'], ['#liderazgo', '#adaptabilidad']],
     points: [[], []],
   },
   {
-    title: ["Healthcare Specialist (68W), Sergeant ", "Especialista en Salud (68W), Sargento"],
+    title: ["Healthcare Specialist (68W), Sergeant", "Especialista en Salud (68W), Sargento"],
     company_name: ["U.S. Army", "Ejército de los EE. UU."],
     icon: usArmy,
     iconBg: "#000",
@@ -218,7 +218,7 @@ const experiences = [
       "Maintained uninterrupted laboratory curriculum by developing repair detection methods that became standard practice to ensure measurement accuracy and functionality of over 30 different types of Arduino sensors.",
       "Assisted with discussion sections, review sessions, or laboratory sessions for over 250 students to use MATLAB to solve real-world engineering problems and increase their coding capabilities.",
     ], [
-      "Mantuve un plan de estudios de laboratorio ininterrumpido mediante el desarrollo de métodos de detección de reparaciones que se convirtieron en una práctica estándar para garantizar la precisión de las mediciones y la funcionalidad de más de 30 tipos diferentes de sensores Arduino",
+      "Mantuve un plan de estudios de laboratorio ininterrumpido mediante el desarrollo de métodos de detección de reparaciones que se convirtieron en una práctica estándar para garantizar la precisión de las mediciones y la funcionalidad de más de 30 tipos diferentes de sensores Arduino.",
       "Ayudé con secciones de discusión, sesiones de revisión o sesiones de laboratorio para que más de 250 estudiantes usaran MATLAB para resolver problemas de ingeniería del mundo real y aumentar sus capacidades de codificación.",
     ]],
   },
