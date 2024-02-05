@@ -9,7 +9,7 @@ const Hero = () => {
 
 
   return (
-    <section className={`relative w-full h-screen mx-auto z-50`}>
+    <section className={` relative w-full h-screen mx-auto z-50`}>
       <div
         className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}
       >
@@ -24,7 +24,7 @@ const Hero = () => {
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             {['I understand how to build software', 'Entiendo cómo crear capacidades de'][language]}{" "}
             <br className="sm:block hidden" /> {['capabilities that are equal parts', 'de software que sean escalables, '][language]}{" "}
-            <br className="sm:block hidden" /> {['scalable, lovable, and compliant.', 'adorables y compatibles.'][language]}
+            <br className="sm:block hidden" /> {['scalable, lovable, and compliant!', 'adorables y compatibles.'][language]}
           </p>
         </div>
       </div>
